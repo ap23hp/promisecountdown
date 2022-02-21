@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="countdown">10</h1>
+    <script>
+
+        function callbackhell(){
+
+        
+        let countdown=10;
+//setTimeout(()=>{
+//document.querySelector(".countdown").innerText=countdown--
+//setTimeout(()=>{
+  //  document.querySelector(".countdown").innerText=countdown--
+//    setTimeout(()=>{
+        //document.querySelector(".countdown").innerText=countdown--
+     
+       // setTimeout(()=>{
+          //  document.querySelector(".countdown").innerText=countdown--
+        //    setTimeout(()=>{
+      //          document.querySelector(".countdown").innerText=countdown--
+    //            setTimeout(()=>{
+  //                  document.querySelector(".countdown").innerText=countdown--
+             //       setTimeout(()=>{
+           //             document.querySelector(".countdown").innerText=countdown--
+         //             
+       //                 setTimeout(()=>{
+     //                       document.querySelector(".countdown").innerText=countdown--
+                        //    setTimeout(()=>{
+                      //          document.querySelector(".countdown").innerText=countdown--
+                    //            setTimeout(()=>{
+                  //                  document.querySelector(".countdown").innerText="Happy Independance day"
+                //                    },1000)   
+              //              },1000)  
+            //            },1000)
+          //          },1000)
+        //        },1000) 
+      //      },1000) 
+    //    },1000)
+  //  },1000)    
+//},1000)
+                                  //  },1000)
+
+const msg =(countdown)=>
+new Promise((resolve,reject)=>{
+    if(countdown>=1){
+setTimeout(()=>{
+    document.querySelector(".countdown").innerText=countdown;
+    resolve(countdown)
+},1000)
+    } else{
+        reject("end")
+    }
+
+})
+
+
+msg(9)//10
+.then(n=>msg(--n))//8
+.then(n=>msg(--n))//7
+.then(n=>msg(--n))//6
+.then(n=>msg(--n))///5
+.then(n=>msg(--n))//4
+.then(n=>msg(--n))//3
+.then(n=>msg(--n))//2
+.then(n=>msg(--n))//1
+.then(
+()=>{
+    setTimeout(()=>{
+        document.querySelector(".countdown").innerText="Happy independance day"
+    },300)
+   
+
+}
+
+)
+//.catch(()=>{
+   // setTimeout(()=>{
+        //document.querySelector(".countdown").innerText="Happy independance day"
+  //  },300)
+   
+//})
+}
+
+callbackhell()
+    </script>
+</body>
+</html>
